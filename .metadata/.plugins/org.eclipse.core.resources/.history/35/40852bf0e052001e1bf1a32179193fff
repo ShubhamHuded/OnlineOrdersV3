@@ -1,0 +1,31 @@
+package br.brpltrade.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import br.brpltrade.DataMapper.HelpEntityDTO;
+import br.brpltrade.entity.HelpEntity;
+import br.brpltrade.repository.HelpRepository;
+
+@Service
+public class HelpService {
+
+	@Autowired
+	HelpRepository helpRepository;
+
+	@Autowired
+	HomeService hService;
+
+	public void saveHelp(HelpEntityDTO objs) {
+		HelpEntity obj = getHelpEntityFromDTO(objs);
+		helpRepository.save(obj);
+	}
+	
+	public HelpEntity getHelpEntityFromDTO(HelpEntityDTO obj) {
+		HelpEntity objH = new HelpEntity();
+		objH.setFirstQuery(obj.getFirstQuery());
+		objH.setSecondQuery(obj.getSecondQuery());
+		objH.setPartyRegistry(hService.getpartyRegistry());
+		return objH;
+	}
+}

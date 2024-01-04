@@ -1,0 +1,38 @@
+package br.brpltrade.controler;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+
+import br.brpltrade.service.AdminService;
+
+@Controller
+@RequestMapping("/admin")
+public class AdminController {
+
+	@Autowired
+	AdminService adminService;
+
+	@GetMapping("/dashboard")
+	public String adminLogin() {
+		return "admins/dashboard";
+	}
+
+	@GetMapping("/default-panel")
+	public String getDefaultPanel() {
+		return "admins/DefaultPanel";
+	}
+
+	@GetMapping("/users")
+	public ResponseEntity<String> getUserList() throws JsonProcessingException {
+		HttpHeaders responseHeaders = new HttpHeaders();
+		responseHeaders.add("Content-Type", "application/json; charset=UTF-8");
+		 return new ResponseEntity<>(adminService.getAllUsers(), responseHeaders, HttpStatus.OK);
+	}
+}

@@ -1,0 +1,31 @@
+<html>
+<body>
+<script type="text/javascript" src="jquery.js">
+</script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+$.ajax({
+type: "GET",
+url: "NewFile.xml",
+dataType: "xml",
+success: parseXml
+});
+function parseXml(xml){
+//Display Authors
+$(xml).find("Tutorial").each(function(){
+$("#output").append($(this).attr("author") + "<br />");
+});
+
+$(xml).find("Tutorial").each(function(){
+//Display date and title of each author
+$("#output").append($(this).find("Date").text());
+$("#output").append(": " + $(this).find("Title").text() + "<br />");
+});
+}
+});
+</script>
+<div id="output">
+</div>
+</body>
+</html> 

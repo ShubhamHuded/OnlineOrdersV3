@@ -1,0 +1,234 @@
+.labels{
+	padding-left:5px;
+	height:23px;
+	vertical-align:top;
+}
+
+.textbox {
+	background-color:#e9dec2;
+	BORDER-RIGHT: #8b7c4a 1px solid; 
+	BORDER-TOP: #8b7c4a 1px solid; 
+	FONT-SIZE: 12px; 
+	BORDER-LEFT: #8b7c4a 1px solid; 
+	COLOR: #000000; 
+	BORDER-BOTTOM: #8b7c4a 1px solid; 
+	FONT-FAMILY: Verdana; 
+	TEXT-DECORATION: none;
+	width:150px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	padding-left:3px;
+	height:17px;
+
+}
+
+
+.dropdownlisttrade
+{
+	background-color:#fff;
+	BORDER-RIGHT: #999 1px solid; 
+	BORDER-TOP: #999 1px solid; 
+	FONT-SIZE: 12px; 
+	BORDER-LEFT: #999 1px solid; 
+	COLOR: #000000; 
+	BORDER-BOTTOM: #999 1px solid; 
+	FONT-FAMILY: Verdana; 
+	TEXT-DECORATION: none;
+	width:155px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	padding-left:3px;
+	height:17px;
+}
+
+
+
+
+.textboxtrade {
+	background-color:#fff;
+	BORDER-RIGHT: #999 1px solid; 
+	BORDER-TOP: #999 1px solid; 
+	FONT-SIZE: 12px; 
+	BORDER-LEFT: #999 1px solid; 
+	COLOR: #000000; 
+	BORDER-BOTTOM: #999 1px solid; 
+	FONT-FAMILY: Verdana; 
+	TEXT-DECORATION: none;
+	width:150px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	padding-left:3px;
+	height:17px;
+
+}
+
+
+.textarea {
+	background-color:#e9dec2;
+	BORDER-RIGHT: #8b7c4a 1px solid; 
+	BORDER-TOP: #8b7c4a 1px solid; 
+	FONT-SIZE: 12px; 
+	BORDER-LEFT: #8b7c4a 1px solid; 
+	COLOR: #000000; 
+	BORDER-BOTTOM: #8b7c4a 1px solid; 
+	FONT-FAMILY: Verdana; 
+	TEXT-DECORATION: none;
+	width:150px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	padding-left:3px;
+	height:50px;
+
+}
+
+
+
+
+.textbox100 {
+	background-color:#e9dec2;
+	BORDER-RIGHT: #8b7c4a 1px solid; 
+	BORDER-TOP: #8b7c4a 1px solid; 
+	FONT-SIZE: 12px; 
+	BORDER-LEFT: #8b7c4a 1px solid; 
+	COLOR: #000000; 
+	BORDER-BOTTOM: #8b7c4a 1px solid; 
+	FONT-FAMILY: Verdana; 
+	TEXT-DECORATION: none;
+	width:100px;	
+	border-radius:3px;
+	-moz-border-radius:3px;
+	padding-left:3px;
+	height:17px;
+
+}
+
+.textbox70 {
+	background-color:#e9dec2;
+	BORDER-RIGHT: #8b7c4a 1px solid; 
+	BORDER-TOP: #8b7c4a 1px solid; 
+	FONT-SIZE: 12px; 
+	BORDER-LEFT: #8b7c4a 1px solid; 
+	COLOR: #000000; 
+	BORDER-BOTTOM: #8b7c4a 1px solid; 
+	FONT-FAMILY: Verdana; 
+	TEXT-DECORATION: none;
+	width:70px;	
+	border-radius:3px;
+	-moz-border-radius:3px;
+	padding-left:3px;
+	height:17px;
+
+}
+
+.dropdownlist
+{
+	background-color:#e9dec2;
+	BORDER-RIGHT: #8b7c4a 1px solid; 
+	BORDER-TOP: #8b7c4a 1px solid; 
+	FONT-SIZE: 12px; 
+	BORDER-LEFT: #8b7c4a 1px solid; 
+	COLOR: #000000; 
+	BORDER-BOTTOM: #8b7c4a 1px solid; 
+	FONT-FAMILY: Verdana; 
+	TEXT-DECORATION: none;
+	width:155px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	padding-left:3px;
+	height:17px;
+}
+
+
+
+.Loginsubm {
+	 
+	COLOR: #000000; 
+	background-color:#8b7c4a;
+	FONT-FAMILY:Verdana, Geneva, sans-serif;
+	FONT-SIZE: 13px;
+	TEXT-DECORATION: none;
+	width:100px;
+	height:25px;
+	border-left:#FFF;
+	border-top:#FFF;
+	border-right:#FFF;
+	border-bottom:#FFF;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	font-weight:bold;
+}
+
+.sellsubmit {
+	 
+	COLOR: #fff; 
+	background-color:#EC0000;
+	FONT-FAMILY:Verdana, Geneva, sans-serif;
+	FONT-SIZE: 13px;
+	TEXT-DECORATION: none;
+	width:100px;
+	height:25px;
+	border-left:#FFF;
+	border-top:#FFF;
+	border-right:#FFF;
+	border-bottom:#FFF;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	font-weight:bold;
+}
+
+
+.buysubmit {
+	 
+	COLOR: #fff; 
+	background-color:#06C;
+	FONT-FAMILY:Verdana, Geneva, sans-serif;
+	FONT-SIZE: 13px;
+	TEXT-DECORATION: none;
+	width:100px;
+	height:25px;
+	border-left:#FFF;
+	border-top:#FFF;
+	border-right:#FFF;
+	border-bottom:#FFF;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	font-weight:bold;
+}
+
+
+.Loginsubm a {
+	 
+	COLOR: #333333; 
+}
+
+.Loginsubm a:hover{
+	 
+	COLOR: #ffffff; 
+	
+}
+
+.passwordreset {
+	 
+	COLOR:#313335; 
+	background-color:#b9aa81;
+	FONT-FAMILY:Verdana, Geneva, sans-serif;
+	FONT-SIZE: 13px;
+	TEXT-DECORATION: none;
+	width:150px;
+	height:22px;
+		border-left:#FFF;
+	border-top:#FFF;
+	border-right:#FFF;
+	border-bottom:#FFF;
+	border-radius:5px;
+	-moz-border-radius:5px;
+}
+
+
+.checkbox{
+  width: 19px;
+  height: 25px;
+  clear: left;
+  float: left;
+	
+}

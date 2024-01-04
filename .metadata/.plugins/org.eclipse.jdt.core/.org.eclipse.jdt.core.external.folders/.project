@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>.org.eclipse.jdt.core.external.folders</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>.link4</name>
+			<type>2</type>
+			<location>D:/workfolder_vss2/Version2_8/JPAProject/Classes</location>
+		</link>
+		<link>
+			<name>.link6</name>
+			<type>2</type>
+			<location>D:/workfolder_vss2/Version2_8/CHECK/Classes</location>
+		</link>
+		<link>
+			<name>.link7</name>
+			<type>2</type>
+			<location>D:/workfolder_vss2/Version2_8/MAIPL/Classes</location>
+		</link>
+		<link>
+			<name>.link8</name>
+			<type>2</type>
+			<location>D:/workfolder_vss2/Version2_8/MAIPL/src</location>
+		</link>
+		<link>
+			<name>.link9</name>
+			<type>2</type>
+			<location>D:/workfolder_vss2/Version2_8/BRPLTRADE/Classes</location>
+		</link>
+	</linkedResources>
+</projectDescription>

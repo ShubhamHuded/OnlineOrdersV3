@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<!-- https://g.co/doodle/8448dbr -->
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css"
+	href="../css/style.css" />
+</head>
+
+<style>
+table { 
+--accent-color: #acbfaa; 
+--text-color: black; 
+	--bgColorDarker: #c9c9c9; 
+	--bgColorLighter: #fcfcfc; 
+	--insideBorderColor: lightgray;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: 2px solid var(--accent-color);
+	border-collapse: collapse;
+	color: var(--text-color);
+	table-layout: fixed;
+}
+
+table caption {
+	margin: 1rem 0;
+	color: slategray;
+	font-size: 1.5rem;
+	font-weight: 600;
+	letter-spacing: 0.055rem;
+	text-align: center;
+}
+
+table thead tr {
+	color: #1e1c1c;
+	background-color: var(--accent-color);
+	font-size: 1rem;
+}
+
+table tbody tr {
+	border: 1px solid var(--insideBorderColor);
+	background-color: var(--bgColorDarker);
+}
+
+table tbody tr:nth-child(odd) {
+	background-color: var( --bgColorLighter);
+}
+
+table th {
+	letter-spacing: 0.075rem;
+}
+
+table th, table td {
+	padding: 0.75rem 1rem;
+	font-weight: normal;
+	text-align: left;
+}
+
+table th:nth-child(4), table td:nth-child(4) {
+	text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+	table {
+		border: none;
+	}
+	table thead {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		clip: rect(0, 0, 0, 0);
+		overflow: hidden;
+	}
+	table tbody tr {
+		margin-bottom: 2rem;
+		display: block;
+	}
+	table td {
+		font-size: 0.875rem;
+		text-align: right;
+		display: block;
+	}
+	table td:before {
+		content: attr(data-label);
+		font-size: 0.75rem;
+		font-weight: 600;
+		letter-spacing: 0.075rem;
+		text-transform: uppercase;
+		float: left;
+		opacity: 0.5;
+	}
+	table td:not(:last-child) {
+		border-bottom: 1px solid var(--insideBorderColor);
+	}
+}
+</style>
+<body>
+	<form id="form" data-form accept-charset="utf-8">
+
+		<div class="subuser--table" id="subtable" >
+			<table id="subuserline--table" data-form-table>
+				<thead>
+					<tr>
+						<th data-col-name="currency" data-col-type="select">Curency</th>
+						<th data-col-name="Max Order Qty" data-col-type="input">Max Order Qty</th>
+						<th data-col-name="Total Order Qty" data-col-type="input" >Total Order Qty</th>
+						<th data-col-name="edit" data-col-type="button" data-col-child="Edit Delete">edit</th>
+					</tr>
+				</thead>
+				<tbody data-table-body data-eve-reg = "click,editRow" ></tbody> 
+			</table>
+			<button data-eve-reg="click,addRow" data-eve-args="3 4 5,35 6" value="AddRow">Add Row</button> 
+			<button data-eve-reg="click,submit" data-eve-args="3 4 5,35 6" value="Submit">Submit</button> 
+		</div>
+		
+
+	</form>
+	<script src="../js/formutil.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;OnlineOrders/src/main/webapp/WEB-INF/jsp/admins/UserList.jsp&apos; to &apos;DefaultPanel.jsp&apos;" description="Rename resource &apos;UserList.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/WEB-INF/jsp/admins/UserList.jsp" name="DefaultPanel.jsp" stamp="1697536838661" updateReferences="true"/>
+</session>

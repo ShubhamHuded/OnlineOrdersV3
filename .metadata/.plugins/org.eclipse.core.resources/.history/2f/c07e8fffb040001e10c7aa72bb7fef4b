@@ -1,0 +1,91 @@
+package br.brpltrade.service;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
+import br.jpa.entity.User;
+import br.brpltrade.DataMapper.BPCollabrationDTO;
+import br.brpltrade.repository.UserRepository;
+
+@Component
+public class UserDetailsServiceImp implements UserDetailsService {
+
+	@Autowired
+	private UserRepository userRepository;
+
+	private User<String> user = null;
+
+	BPCollabrationDTO bpDTO = null;
+
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		String emailOrPhone = checkEmailOrPhoneNumber(username);
+
+		if (emailOrPhone.equals("Email"))
+			user = userRepository.findByUserEmailId(username);
+		else if (emailOrPhone.equals("Phone Number"))
+			user = userRepository.findByUserMobile(username);
+
+		if (user == null) {
+			throw new UsernameNotFoundException("User not found with username: " + username);
+		}
+
+		return new org.springframework.security.core.userdetails.User(user.getUserEmailId(), user.getUserPassword(),
+				getAuthorities(user.getUserType()));
+
+	}
+
+	private Collection<GrantedAuthority> getAuthorities(String userTYpe) {
+		GrantedAuthority authority = new SimpleGrantedAuthority(userTYpe);
+		List<GrantedAuthority> authorities = new ArrayList<>();
+		authorities.add(authority);
+		return authorities;
+	}
+
+	private String checkEmailOrPhoneNumber(String input) {
+		// Regular expressions for email and phone number patterns
+		String emailPattern = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
+		String phonePattern = "^[+]?[(]?[0-9]+[)]?[-\\s.]?[0-9]+[-\\s.]?[0-9]+$";
+
+		// Create Pattern objects for the email and phone number patterns
+		Pattern emailRegex = Pattern.compile(emailPattern);
+		Pattern phoneRegex = Pattern.compile(phonePattern);
+
+		// Create Matcher objects for the input and the patterns
+		Matcher emailMatcher = emailRegex.matcher(input);
+		Matcher phoneMatcher = phoneRegex.matcher(input);
+
+		// Check if the input matches the email or phone number pattern
+		if (emailMatcher.matches()) {
+			return "Email";
+		} else if (phoneMatcher.matches()) {
+			return "Phone Number";
+		} else {
+			return "Neither Email nor Phone Number";
+		}
+	}
+
+	@Bean
+	public PasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
+
+}

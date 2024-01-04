@@ -1,0 +1,260 @@
+
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a, a:visited, a:focus, a:hover {
+	text-decoration: none;
+	color: black;
+}
+
+.main--basecontainer {
+	display: flex;
+	justify-content: center;
+}
+
+.main--basecontainer__left {
+	margin-top: 2rem;
+	width: 47%;
+	position: relative;
+}
+
+.leftbase--container {
+	position: absolute;
+}
+
+.main--basecontainer__right {
+	display: flex;
+	justify-content: center;
+	margin-top: 2rem;
+	width: 50%;
+	margin-left: 0;
+	padding-left: 1rem;
+}
+
+.main--basecontainer__left img {
+	height: 400px;
+}
+
+.right--container--center {
+	display: flex;
+	flex-direction: column;
+	margin-right: .5rem;
+	width: 50%;
+	justify-content: right;
+}
+
+.login--msg p {
+	font-style: Inter;
+	font-weight: 400;
+	font-size: 40px;
+	margin-bottom: 2rem;
+}
+
+.hero {
+	max-width: 1300px;
+	width: 95%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.notif--scroll {
+	display: flex;
+	gap: 5px;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scrollbar-width: none;
+	padding: 1rem;
+}
+
+.courses {
+	width: 150px;
+	height: 300px;
+	background: rgba(255, 255, 255, 0.4);
+	border-radius: 21.2298px;
+	padding: 0.5rem;
+}
+
+.scrollEle {
+	position: relative;
+	align-items: center;
+	display: flex;
+	flex: 0 0 220px;
+	justify-content: center;
+	scroll-snap-align: start;
+	margin-right: 10px;
+	box-shadow: 1px 2px 2px #ebebeb;
+}
+
+.course_name {
+	position: absolute;
+	top: 2%;
+	left: 2%;
+}
+
+.course_event {
+	position: absolute;
+	top: 13%;
+	left: 0%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	font-size: 0.8rem;
+	grid-gap: 13px;
+}
+
+.course_img {
+	position: absolute;
+	top: 25%;
+}
+
+.course_img--chng {
+	height: 225px;
+	width: 218px;
+	border-radius: 20px;
+}
+
+@media screen and (max-width: 600px) {
+	.hero img {
+		height: 300px;
+	}
+}
+
+.input--group {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 24px;
+}
+
+.input--group label {
+	margin-bottom: 0.5rem;
+}
+
+.input--group input {
+	padding: 0.4rem;
+	background: #FFFFFF;
+	border: 1px solid #000000;
+	border-radius: 12px;
+}
+
+.input--group__login {
+	position: relative;
+	margin-top: 2.2rem;
+}
+
+.input--group__login input {
+	background-color: #EE7B10 !important;
+}
+
+.login--svg {
+	position: absolute;
+	top: -9px;
+	left: 115px;
+}
+
+.extra--login {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top:10px;
+}
+
+.forgotpass {
+	position: absolute;
+	top: -1px;
+	left: 85%;
+}
+
+.disNone {
+	display: none;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@
+keyframes fade {from { opacity:0.4;
+	
+}
+
+to {
+	opacity: 1;
+}
+
+}
+body {
+	background: #eeeee;
+}
+
+#slider {
+	margin: 0 auto;
+	width: 80%;
+	overflow: hidden;
+}
+
+.slides {
+	overflow: hidden;
+	animation-name: fade;
+	animation-duration: 1s;
+	display: none;
+}
+
+.slides {
+	width: 100%;
+	border-radius: 12px;
+}
+
+#dot {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.dot {
+	display: inline-block;
+	border-radius: 50%;
+	background: #d3d3d3;
+	padding: 8px;
+	margin: 10px 5px;
+}
+
+.active {
+	background: black;
+}
+
+@media ( max-width :567px) {
+	#slider {
+		width: 100%;
+	}
+}
+
+#heading {
+	display: block;
+	text-align: center;
+	font-size: 2em;
+	margin: 10px 0px;
+}
+
+.logingst {
+	margin: 1.5rem;
+}
+
+.socialicon {
+	display: flex;
+	justify-content: space-between;
+	margin: 30px;
+	width: 60%;
+	margin-right: auto;
+	margin-left: auto;
+}
